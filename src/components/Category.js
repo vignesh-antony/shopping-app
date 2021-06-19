@@ -1,13 +1,13 @@
 import { CategoryStyle, CategoryContentStyle } from "../styles/sidebarstyle";
 
-const Category = ({ categ_name, count, icon }) => {
+const Category = ({ categ_id, categ_name, desc, icon, onCategChange }) => {
     return (
-        <CategoryStyle>
-            {icon}
+        <CategoryStyle onClick={() => onCategChange(categ_id)}>
             <CategoryContentStyle>
                 <h4>{categ_name}</h4>
-                <p>Available items : {count}</p>
+                <p>{desc}</p>
             </CategoryContentStyle>
+            {icon}
         </CategoryStyle>
     );
 };

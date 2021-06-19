@@ -6,6 +6,7 @@ export const SidebarStyle = styled.section`
     display: flex;
     flex-direction: column;
     padding: 1em;
+    border-right: 1px solid gainsboro;
 `;
 
 export const NoteStyle = styled.p`
@@ -24,6 +25,7 @@ export const CategoryListStyle = styled.div`
 
 export const CategoryStyle = styled.div`
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 0.75em;
     border-radius: 0.75em;
@@ -38,15 +40,16 @@ export const CategoryStyle = styled.div`
 `;
 
 export const CategoryContentStyle = styled.div`
-    margin-left: 1em;
+    margin-right: 1em;
 
     h4 {
         font-size: 0.95em;
+        color: #595959;
     }
 
     p {
         color: gray;
-        font-size: 0.85em;
-        margin-top: 0.25em;
+        font-size: 0.75em;
+        margin-top: 0.3em;
     }
 `;

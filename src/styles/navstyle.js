@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Navstyle = styled.header`
+export const NavStyle = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,10 +18,33 @@ export const Navstyle = styled.header`
         }
     }
     nav {
+        display: flex;
+        align-items: center;
         a {
             color: black;
             padding: 0.25em 1em;
             font-size: 0.95em;
         }
+    }
+`;
+
+export const NavIconStyle = styled.div`
+    padding: 0.25em 0.5em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2em;
+        height: 2em;
+        font-size: 0.7em;
+        font-weight: bold;
+        border-radius: 50%;
+        color: white;
+        background-color: darkblue;
+        margin-left: 0.75em;
     }
 `;
