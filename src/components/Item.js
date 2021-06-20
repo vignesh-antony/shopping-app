@@ -4,32 +4,16 @@ import {
     ItemPrizeStyle,
     ItemTitleStyle,
     ItemStockStyle,
-    ItemCountStyle,
-    ItemIncrease,
-    ItemDecrease,
     ItemInfoText,
-    ItemCountNumber,
 } from "../styles/mainbarstyle";
 
 import Icon from "./Icon";
 import Button from "./Button";
+import ItemCount from "./ItemCount";
 
-const Item = ({
-    item_id,
-    item_name,
-    item_desc,
-    prize,
-    stock,
-    image_url,
-    order,
-    onAddItem,
-    onRemoveItem,
-}) => {
+const Item = ({ item, order, onAddItem, onRemoveItem }) => {
+    let { item_id, item_name, item_desc, prize, stock, image_url } = item;
     const image = require(`../assets/img/${image_url}`).default;
-
-    const handleOrderItem = () => {
-        stock > order.count && onAddItem(item_id);
-    };
 
     return (
         <ItemStyle>
@@ -42,17 +26,15 @@ const Item = ({
                 <ItemInfoText>{item_desc}</ItemInfoText>
                 <ItemPrizeStyle>₹ {prize} /-</ItemPrizeStyle>
                 {order && order.count > 0 ? (
-                    <ItemCountStyle>
-                        <ItemDecrease onClick={() => onRemoveItem(item_id)}>
-                            -
-                        </ItemDecrease>
-                        <ItemCountNumber>{order.count}</ItemCountNumber>
-                        <ItemIncrease onClick={handleOrderItem}>+</ItemIncrease>
-                    </ItemCountStyle>
+                    <ItemCount
+                        {...item}
+                        order={order}
+                        onAddItem={onAddItem}
+                        onRemoveItem={onRemoveItem}
+                    />
                 ) : (
                     <Button
                         name="Add to Cart"
-                        important
                         onButtonClick={() => onAddItem(item_id)}
                     />
                 )}

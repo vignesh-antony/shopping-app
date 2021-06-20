@@ -4,7 +4,7 @@ import { SidebarStyle, NoteStyle } from "../styles/sidebarstyle";
 const Sidebar = ({ item_list, onCategChange }) => {
     return (
         <SidebarStyle>
-            <h3>Categories</h3>
+            <h5>CATEGORIES</h5>
             <NoteStyle>
                 You can filter out the categories shown below.
             </NoteStyle>

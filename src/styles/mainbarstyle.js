@@ -9,7 +9,7 @@ export const MainbarStyle = styled.section`
 export const ItemListStyle = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fill, 270px);
-    gap: 1em;
+    gap: 1.5em;
     margin-top: 1em;
 `;
 
@@ -17,24 +17,31 @@ export const ItemStyle = styled.div`
     padding: 1em;
     display: flex;
     flex-direction: column;
-    border-radius: 1em;
-    box-shadow: inset 0 0 0 1px gainsboro;
+    background-color: white;
+    border-radius: 0.5em;
+    box-shadow: 0 0 0 1px whitesmoke;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+        box-shadow: 0 0 20px 1px gainsboro;
+    }
 `;
 
 export const ItemInfoStyle = styled.div`
+    flex: 1;
     display: flex;
     flex-direction: column;
     margin-top: 1em;
 `;
 export const ItemInfoText = styled.p`
-    margin-top: 0.75em;
+    margin: 0.75em 0 1.25em 0;
     color: gray;
     font-size: 0.8em;
 `;
 export const ItemTitleStyle = styled.h4`
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 `;
 
 export const ItemStockStyle = styled.div`
@@ -54,7 +61,7 @@ export const ItemStockStyle = styled.div`
 export const ItemPrizeStyle = styled.div`
     font-size: 1.15em;
     font-weight: bold;
-    margin: 1em 0;
+    margin: auto 0 1em 0;
     color: #206717;
 `;
 

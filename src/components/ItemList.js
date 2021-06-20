@@ -13,7 +13,7 @@ const ItemList = ({ items, onAddItem, onRemoveItem, categ_orders }) => {
                 return (
                     <Item
                         key={`item-${i}`}
-                        {...item}
+                        item={item}
                         onAddItem={onAddItem}
                         onRemoveItem={onRemoveItem}
                         order={order_already}

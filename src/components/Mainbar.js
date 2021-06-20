@@ -18,7 +18,7 @@ const Mainbar = ({
 
     return (
         <MainbarStyle>
-            <h2>{categ_name}</h2>
+            <h3>{categ_name}</h3>
             <NoteStyle>
                 This category consists of items like {desc} etc.
             </NoteStyle>

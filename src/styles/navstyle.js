@@ -17,10 +17,11 @@ export const NavStyle = styled.header`
             margin-left: 0.5em;
         }
     }
-    nav {
+    ul {
         display: flex;
         align-items: center;
-        a {
+        list-style-type: none;
+        li {
             color: black;
             padding: 0.25em 1em;
             font-size: 0.95em;
