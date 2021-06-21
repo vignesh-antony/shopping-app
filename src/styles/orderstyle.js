@@ -8,7 +8,7 @@ export const OrderStyle = styled.div`
 
 export const OrderListStyle = styled.div`
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 1em;
     margin-top: 1em;
 `;
@@ -21,7 +21,21 @@ export const OrderItemStyle = styled.div`
 `;
 
 export const OrderItemInfo = styled.div`
+    flex: 1;
     margin-left: 1em;
     display: flex;
     flex-direction: column;
+`;
+
+export const OrderCountWrapper = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+`;
+
+export const OrderPrizeStyle = styled.p`
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #206717;
+    margin-left: auto;
 `;

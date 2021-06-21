@@ -67,10 +67,11 @@ export const ItemPrizeStyle = styled.div`
 
 export const ItemCountStyle = styled.div`
     display: grid;
-    grid-template-columns: 50px 1fr 50px;
+    grid-template-columns: ${props => props.smaller ? '30px 1fr 30px' : '50px 1fr 50px'};;
     border: 1px solid gainsboro;
     border-radius: 5px;
     font-weight: bold;
+    font-size: ${props => props.smaller ? '0.8em' : 'normal'};
 `;
 
 export const ItemCountNumber = styled.p`
@@ -78,6 +79,7 @@ export const ItemCountNumber = styled.p`
     justify-content: center;
     align-items: center;
     font-size: 0.9em;
+    padding: 0 1em;
 `;
 
 export const ItemIncrease = styled.span`

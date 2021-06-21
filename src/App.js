@@ -27,7 +27,7 @@ const item_list = [
                 item_categ: "Monitor",
                 item_desc:
                     "22 inch - IPS panel display - 120Hz refresh rate - 1 year warranty",
-                prize: "14,999",
+                prize: "14999",
                 stock: 2,
                 image_url: "computer/monitor.jpg",
             },
@@ -36,7 +36,7 @@ const item_list = [
                 item_name: "KuWfi Computer Mouse Bluetooth",
                 item_categ: "Mouse",
                 item_desc: "Bluetooth 3.0 - High Battery Life",
-                prize: "2,450",
+                prize: "2450",
                 stock: 1,
                 image_url: "computer/kuwfi-mouse.jpeg",
             },

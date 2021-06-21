@@ -4,7 +4,7 @@ import {
     ItemDecrease,
     ItemCountNumber,
 } from "../styles/mainbarstyle";
-const ItemCount = ({ item_id, stock, order, onAddItem, onRemoveItem }) => {
+const ItemCount = ({ item_id, stock, order, smaller, onAddItem, onRemoveItem }) => {
     if (!order) return <></>;
 
     const handleOrderItem = () => {
@@ -12,7 +12,7 @@ const ItemCount = ({ item_id, stock, order, onAddItem, onRemoveItem }) => {
     };
 
     return (
-        <ItemCountStyle>
+        <ItemCountStyle smaller={smaller}>
             <ItemDecrease onClick={() => onRemoveItem(item_id)}>-</ItemDecrease>
             <ItemCountNumber>{order.count}</ItemCountNumber>
             <ItemIncrease onClick={handleOrderItem}>+</ItemIncrease>
